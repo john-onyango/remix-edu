@@ -267,3 +267,33 @@ export const products = {
     ],
   };
   
+export const teamMembers = [
+  { 
+    id: 1, 
+    name: 'Emma Reynolds', 
+    position: 'Founder & CEO', 
+    bio: 'Emma founded Remi-x-commerce in 2018 with a vision to create a seamless shopping experience for fashion-forward individuals.',
+    image: 'https://dummyjson.com/icon/emilys/128'
+  },
+  { 
+    id: 2, 
+    name: 'Marcus Chen', 
+    position: 'Creative Director', 
+    bio: 'With over 15 years in the fashion industry, Marcus brings a unique perspective to our product curation and brand identity.',
+    image: 'https://dummyjson.com/icon/emilys/128'
+  },
+  { 
+    id: 3, 
+    name: 'Sophia Patel', 
+    position: 'Head of Customer Experience', 
+    bio: 'Sophia ensures that every customer interaction with Remi-x-commerce exceeds expectations and builds lasting relationships.',
+    image: 'https://dummyjson.com/icon/emilys/128'
+  },
+  { 
+    id: 4, 
+    name: 'James Wilson', 
+    position: 'Technology Lead', 
+    bio: 'James develops innovative solutions that make the Remi-x-commerce platform fast, secure, and intuitive to use.',
+    image: 'https://dummyjson.com/icon/emilys/128'
+  },
+];
