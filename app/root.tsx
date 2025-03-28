@@ -112,7 +112,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-bold text-lg mb-4">Customer Service</h3>
               <ul className="flex flex-col gap-2">
-              <Link className="text-gray-600 hover:text-gray-900" to="#" key="Contact Us">Contact Us</Link>
+              <Link className="text-gray-600 hover:text-gray-900" to="support" key="Contact Us">Support</Link>
               <Link className="text-gray-600 hover:text-gray-900" to="about" key="About">About</Link>
               </ul>
             </div>

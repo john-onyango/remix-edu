@@ -1,3 +1,4 @@
+import { TicketRequest, ticketSystem } from "./ticketmanager";
 
 export const categories = [
   { id: 1, name: 'Electronics', subcategories: ['Phones', 'Laptops', 'Accessories'] },
@@ -309,6 +310,15 @@ export const fetchAboutData = async (): Promise<{ teamMembers: TeamMember[] }> =
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ teamMembers });
+    }, 3000);
+  });
+};
+
+export const fetchTickets = async (): Promise<{ tickets: TicketRequest[] }> => {
+  const tickets =  ticketSystem.getAllTickets();
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ tickets  });
     }, 3000);
   });
 };
