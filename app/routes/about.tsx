@@ -1,11 +1,17 @@
+import { useLoaderData } from '@remix-run/react';
 import { Button } from '~/components/ui/button';
 import { Card, CardContent } from '~/components/ui/card';
-import { categories, teamMembers } from '~/lib/mocks';
+import { fetchAboutData } from '~/lib/mocks';
 
 
-export const loader = () => ({ categories, teamMembers });
+export const loader = async () => {
+  const { teamMembers } =await fetchAboutData();
+  return ({ teamMembers });
+};
 
-const AboutPage = () => {
+const AboutPage =() => {
+  const {teamMembers} = useLoaderData<typeof loader>();
+
   return (
     <div className="flex flex-col min-h-screen">
 
