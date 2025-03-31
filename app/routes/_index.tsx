@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import HomePage from "~/components/homepage";
+import { fetchCollections } from "~/shopify/collections";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,9 +10,12 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
-  return (
-    <HomePage/>
-  )
-}
+export const loader = async () => {
+  const collections = await fetchCollections();
+  return { collections };
+};
 
+export default function Index() {
+  const { collections } = useLoaderData<typeof loader>();
+  return <HomePage collections={collections} />;
+}
